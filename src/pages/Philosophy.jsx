@@ -9,6 +9,9 @@ const Philosophy = () => {
     <section className={styles.philosophy}>
       <div className={styles.philosophyList}>
         <div className={styles.item}>
+          <br />
+          <br />
+          <ab>경영철학</ab>
           <h4>
             최고의 품질과 고객중심, <br />
             창의적 도전으로 세상을 행복하게 한다.
@@ -21,13 +24,54 @@ const Philosophy = () => {
         </div>
 
         <div className={styles.item}>
-          <h4>고객 만족</h4>
-          <p>고객의 기대를 넘는 서비스와 경험을 제공하겠습니다.</p>
+          <br />
+          <br />
+          <ab>비전</ab>
+          <h4>GREAT FOOD COMPANY</h4>
+          <p>
+            SPC그룹의 비전은 전 세계인에게 존경받고 지속 성장 가능한
+            <br />
+            경쟁력을 갖춘 글로벌 종합식품기업이 되는 것입니다.
+          </p>
         </div>
 
         <div className={styles.item}>
-          <h4>지속 가능한 성장</h4>
-          <p>환경과 사회를 생각하며, 함께 성장하는 기업이 되겠습니다.</p>
+          <br />
+          <ab>핵심가치</ab>
+          <h4>
+            핵심가치를 지키고 실천할 때 SPC그룹이 <br />
+            추구하는 행복한 세상이 펼쳐집니다.
+          </h4>
+          <p>
+            SPC그룹의 핵심가치는 SPC문화를 구성하는 신조이며 <br />
+            최고의 기업으로 성장할 수 있는 성공 DNA입니다.
+          </p>
+          <ul className={styles.innerTag}>
+            <li className={styles.innerBox}>
+              <h4>정직</h4>
+              <p>
+                우리는 기본에 충실하며
+                <br />
+                올바르게 행동한다.
+              </p>
+            </li>
+            <li className={styles.innerBox}>
+              <h4>혁신</h4>
+              <p>
+                우리는 변화를 추구하며
+                <br />
+                열정적으로 도전한다.
+              </p>
+            </li>
+            <li className={styles.innerBox}>
+              <h4>협업</h4>
+              <p>
+                우리는 다양성을 존중하며
+                <br />
+                유기적으로 협력한다.
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

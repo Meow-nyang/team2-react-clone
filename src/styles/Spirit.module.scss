@@ -1,64 +1,137 @@
-// src/styles/SangMiDang.module.scss
-.sangMiDang {
+.spirit {
   padding: 3rem 2rem;
-  background-color: #f9f9f9;
-  color: #222;
+  background-color: #fff;
+  text-align: center;
 
-  .intro {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1800px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+
+  .item {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    padding: 2rem;
+    color: #333;
+    transition: transform 0.3s ease;
     text-align: center;
-    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    .topItem {
+      display: flex;
+    }
+
+    .topText {
+      margin-left: 150px;
+      margin-bottom: 200px;
+    }
+
+    .bottomText {
+      position: absolute;
+      top: 0;
+      left: 10;
+      text-align: left;
+    }
 
     h3 {
-      font-size: 2rem;
-      font-weight: bold;
+      font-size: 1.6rem;
+      font-weight: 800;
       margin-bottom: 1rem;
     }
 
     p {
       font-size: 1.1rem;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: 0 auto 0.8rem;
+      line-height: 1.2;
+      font-weight: 500;
     }
-  }
 
-  .values {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 2rem;
+    img {
+      max-width: 320px;
+      margin-bottom: 12rem;
+      margin-left: 14rem;
+    }
 
-    .card {
-      flex: 1 1 250px;
-      max-width: 300px;
-      background: #fff;
-      padding: 1.5rem;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      text-align: center;
-      transition: transform 0.3s ease;
+    &:hover {
+      transform: translateY(-5px);
+    }
 
-      &:hover {
-        transform: translateY(-5px);
-      }
+    // 첫 번째 요소: 가로 전체
+    &:nth-child(1) {
+      flex: 1 1 100%;
+      height: 520px;
+      background-image: url('../assets/images/sangMiDang01.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: left;
+      padding: 2rem;
 
       img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        margin-bottom: 1rem;
+        margin-right: 3rem;
       }
 
-      h4 {
-        font-size: 1.3rem;
-        font-weight: bold;
-        margin-bottom: 0.5rem;
+      div {
+        flex: 1;
+      }
+
+      h3 {
+        font-size: 2rem;
       }
 
       p {
-        font-size: 1rem;
+        font-weight: 600;
+        font-size: 1.2rem;
         color: #444;
+      }
+    }
+
+    // 2, 3번 요소: 한 줄에 나란히
+    &:nth-child(2),
+    &:nth-child(3) {
+      flex: 1 1 35%;
+      height: 316px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      background-repeat: no-repeat;
+      color: #fff;
+
+      h3 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+    }
+
+    &:nth-child(2) {
+      background-image: url('../assets/images/sangMiDang02.webp');
+    }
+
+    &:nth-child(3) {
+      background-image: url('../assets/images/sangMiDang03.webp');
+    }
+
+    @media (max-width: 768px) {
+      &:nth-child(2),
+      &:nth-child(3) {
+        flex: 1 1 100%;
+        max-width: 100%;
       }
     }
   }
