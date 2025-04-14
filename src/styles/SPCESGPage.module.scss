@@ -1,0 +1,173 @@
+/* styles/SPCESGPage.module.scss */
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .menuContainer {
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 0 15px;
+
+        a {
+          text-decoration: none;
+          color: #333;
+          font-weight: bold;
+
+          &:hover,
+          &.active {
+            color: #0078ff;
+            border-bottom: 2px solid #0078ff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.esgManagementSection {
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+
+  .sectionTitle {
+    text-align: center;
+    margin-bottom: 30px;
+
+    h3 {
+      font-size: 2rem;
+      color: #333;
+    }
+  }
+
+  .sectionContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+
+    .imageContainer {
+      margin-bottom: 20px;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .sectionDescription {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.8;
+      white-space: pre-line;
+    }
+  }
+}
+
+.sustainabilityReportSection {
+  padding: 50px 20px;
+  background-color: #fff;
+
+  .background-wrap {
+    background-image: url('../assets/images/esg.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    :hover
+
+    span {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 10px 20px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+  }
+}
+
+.happyHealthySection {
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+
+  .sectionTitle {
+    text-align: center;
+    margin-bottom: 30px;
+
+    h3 {
+      font-size: 2rem;
+      color: #333;
+    }
+  }
+
+  .sectionContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+
+    .sectionDescription {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+  }
+
+  .strategyTable {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    text-align: left;
+
+    .strategyColumn {
+      flex: 1;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+      h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+      }
+
+      ul {
+        list-style: disc;
+        padding-left: 20px;
+
+        li {
+          margin-bottom: 10px;
+          font-size: 1rem;
+          color: #444;
+        }
+      }
+    }
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #0078ff;
+  }
+}
