@@ -49,9 +49,10 @@
 
 .right {
   display: flex;
-  gap: 4.3rem;
+  gap: 4.5rem;
   list-style: none;
   justify-content: space-between;
+  transform: translateX(-80px);
 }
 
 .left {
