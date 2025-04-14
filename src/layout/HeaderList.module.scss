@@ -1,0 +1,49 @@
+/* src/layout/HeaderList.module.scss */
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: white;
+  padding: 2rem;
+  border-top: 1px solid #eee;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+  min-width: 120px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  margin-bottom: 0.5rem;
+
+  a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.95rem;
+
+    &:hover {
+      background: lightgray;
+    }
+  }
+}

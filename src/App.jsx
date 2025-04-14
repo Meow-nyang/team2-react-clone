@@ -1,0 +1,11 @@
+import React from "react";
+import Header from "./layout/Header";
+import Footer from "./layout/Footer";
+import { RouterProvider } from "react-router-dom";
+import { routes } from "./routes/router-config";
+
+function App() {
+  return <RouterProvider router={routes} />;
+}
+
+export default App;
