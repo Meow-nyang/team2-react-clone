@@ -31,7 +31,7 @@ const Header = () => {
               <Link to='/spcNow'>SPC NOW</Link>
             </li>
             <li>
-              <Link to='/esg'>ESG</Link>
+              <Link to='/esg/management'>ESG</Link>
             </li>
             <li>
               <Link to='/support'>SUPPORT</Link>
