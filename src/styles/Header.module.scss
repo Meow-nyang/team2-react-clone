@@ -8,44 +8,48 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 0 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #0078d7;
-  text-decoration: none;
+  margin-top: 5px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+  }
 }
 
 .nav {
   list-style: none;
   display: flex;
-  gap: 2rem;
-  width: 80%;
+  gap: 5rem;
+  width: 1800px;
+  position: relative;
 
-  justify-content: space-between;
+  justify-content: center;
 
   li a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
     transition: color 0.2s ease-in-out;
-
-    &:hover {
-      color: #0078d7;
-    }
   }
 }
 
 .right {
   display: flex;
-  gap: 2rem;
+  gap: 4.3rem;
   list-style: none;
   justify-content: space-between;
 }
@@ -54,14 +58,17 @@
   list-style: none;
   display: flex;
   gap: 2rem;
+  position: absolute;
+  right: 2rem;
 }
 
 .career {
   padding: 8px 16px;
-  border-radius: 35%;
+  border-radius: 1em;
   border: none;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.4s ease-in-out;
   &:hover {
-    color: #0078d7;
+    background: skyblue;
+    color: #fff;
   }
 }

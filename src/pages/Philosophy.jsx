@@ -48,28 +48,34 @@ const Philosophy = () => {
           </p>
           <ul className={styles.innerTag}>
             <li className={styles.innerBox}>
-              <h4>정직</h4>
-              <p>
-                우리는 기본에 충실하며
-                <br />
-                올바르게 행동한다.
-              </p>
+              <div className={styles.innerText}>
+                <h4>정직</h4>
+                <p>
+                  우리는 기본에 충실하며
+                  <br />
+                  올바르게 행동한다.
+                </p>
+              </div>
             </li>
             <li className={styles.innerBox}>
-              <h4>혁신</h4>
-              <p>
-                우리는 변화를 추구하며
-                <br />
-                열정적으로 도전한다.
-              </p>
+              <div className={styles.innerText}>
+                <h4>혁신</h4>
+                <p>
+                  우리는 변화를 추구하며
+                  <br />
+                  열정적으로 도전한다.
+                </p>
+              </div>
             </li>
             <li className={styles.innerBox}>
-              <h4>협업</h4>
-              <p>
-                우리는 다양성을 존중하며
-                <br />
-                유기적으로 협력한다.
-              </p>
+              <div className={styles.innerText}>
+                <h4>협업</h4>
+                <p>
+                  우리는 다양성을 존중하며
+                  <br />
+                  유기적으로 협력한다.
+                </p>
+              </div>
             </li>
           </ul>
         </div>

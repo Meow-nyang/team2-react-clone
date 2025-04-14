@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from '../styles/Header.module.scss';
 import { Link } from 'react-router-dom';
 import HeaderList from './HeaderList';
+import logo from '../assets/images/SPC_logo_core_alt_color.jpg';
 
 const Header = () => {
   const [isHoverMenu, setIsHoverMenu] = useState(false);
@@ -14,7 +15,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link to='/' className={styles.logo}>
-          SPC
+          <img src={logo} alt='SPC 로고' />
         </Link>
         <nav className={styles.nav}>
           <ul className={styles.right} onMouseEnter={() => handleMouseOn(true)}>
@@ -37,6 +38,7 @@ const Header = () => {
               <Link to='/support'>SUPPORT</Link>
             </li>
           </ul>
+          <br />
           <ul className={styles.left}>
             <li>
               <button className={styles.career}>CAREERS</button>
@@ -49,12 +51,12 @@ const Header = () => {
               </select>
             </li>
           </ul>
-          {isHoverMenu && (
-            <div className={styles.dropdown}>
-              <HeaderList onMouse={handleMouseOn} />
-            </div>
-          )}
         </nav>
+        {isHoverMenu && (
+          <div className={styles.dropdown}>
+            <HeaderList onMouse={handleMouseOn} />
+          </div>
+        )}
       </div>
     </header>
   );
