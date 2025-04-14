@@ -39,7 +39,7 @@ const Header = () => {
           </ul>
           <ul className={styles.left}>
             <li>
-              <button className={styles.career}>CARRERS</button>
+              <button className={styles.career}>CAREERS</button>
             </li>
             <li>
               <select>
