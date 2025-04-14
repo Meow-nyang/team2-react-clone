@@ -90,20 +90,25 @@
     border-radius: 20px;
     padding: 20px;
     height: 250px;
+    width: 636px;
+
+    display: flex;
+    align-items: center;
 
     .txt {
+      padding-left: 35px;
+      width: 100%;
       .body {
         font-size: 15px;
-        font-weight: 400;
+        font-weight: 700;
         line-height: 1.6;
-        margin-bottom: 20px;
-        padding-bottom: 70px;
+        margin-bottom: 40px;
       }
 
       .btn {
         a {
           display: inline-block;
-          padding: 10px 20px;
+          padding: 7px 18px;
           background-color: #fff;
           color: rgba(0, 0, 0, 0.5);
           text-decoration: none;
