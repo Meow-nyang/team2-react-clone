@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styles from "./Header.module.scss";
-import { Link } from "react-router-dom";
-import HeaderList from "./HeaderList";
+import React, { useState } from 'react';
+import styles from '../styles/Header.module.scss';
+import { Link } from 'react-router-dom';
+import HeaderList from './HeaderList';
 
 const Header = () => {
   const [isHoverMenu, setIsHoverMenu] = useState(false);
@@ -13,28 +13,28 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Link to="/" className={styles.logo}>
+        <Link to='/' className={styles.logo}>
           SPC
         </Link>
         <nav className={styles.nav}>
           <ul className={styles.right} onMouseEnter={() => handleMouseOn(true)}>
             <li>
-              <Link to="/about">ABOUT SPC</Link>
+              <Link to='/about'>ABOUT SPC</Link>
             </li>
             <li>
-              <Link to="/history">HISTORY</Link>
+              <Link to='/history'>HISTORY</Link>
             </li>
             <li>
-              <Link to="/brand">BRAND</Link>
+              <Link to='/brand'>BRAND</Link>
             </li>
             <li>
-              <Link to="/spcNow">SPC NOW</Link>
+              <Link to='/spcNow'>SPC NOW</Link>
             </li>
             <li>
-              <Link to="/esg">ESG</Link>
+              <Link to='/esg'>ESG</Link>
             </li>
             <li>
-              <Link to="/support">SUPPORT</Link>
+              <Link to='/support'>SUPPORT</Link>
             </li>
           </ul>
           <ul className={styles.left}>
@@ -43,9 +43,9 @@ const Header = () => {
             </li>
             <li>
               <select>
-                <option value="korean">KO</option>
-                <option value="english">EN</option>
-                <option value="chinese">CN</option>
+                <option value='korean'>KO</option>
+                <option value='english'>EN</option>
+                <option value='chinese'>CN</option>
               </select>
             </li>
           </ul>
