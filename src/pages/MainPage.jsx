@@ -4,12 +4,16 @@ import { useTranslation } from 'react-i18next';
 import LanguageSelector from '../components/LanguageSelector';
 
 // 이미지 import (src/assets/images 기준)
-import parisBaguette from '../assets/images/parisBaqeutte.webp';
-import baskinRobbins from '../assets/images/baskinrabins.webp';
-import dunkin from '../assets/images/dunkin.webp';
-import pascucci from '../assets/images/pasqucci.webp';
+import parisBaguette from '../assets/images/sangMiDang02.webp';
+import baskinRobbins from '../assets/images/breads.webp';
+import dunkin from '../assets/images/together.webp';
 
-const heroImages = [parisBaguette, baskinRobbins, dunkin, pascucci];
+import m1 from '../assets/images/bread.webp';
+import m2 from '../assets/images/coffee.webp';
+import m3 from '../assets/images/foods.webp';
+import m4 from '../assets/images/icecream.webp';
+
+const mainImages = [m1, m2, m3, m4];
 
 const MainPage = () => {
   const [index, setIndex] = useState(0);
@@ -18,33 +22,36 @@ const MainPage = () => {
 
   const brands = [
     {
-      title: t('parisBaguette'),
+      title: '헤리티지',
       image: parisBaguette,
     },
     {
-      title: t('baskinRobbins'),
+      title: 'SPC WAY',
       image: baskinRobbins,
     },
     {
-      title: t('dunkin'),
+      title: 'ESG',
       image: dunkin,
     },
+    // {
+    //   title: '파스쿠찌',
+    //   image: pascucci,
+    // },
   ];
-
   const goPrev = () => {
-    setIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+    setIndex((prev) => (prev - 1 + mainImages.length) % mainImages.length);
     resetTimer();
   };
 
   const goNext = () => {
-    setIndex((prev) => (prev + 1) % heroImages.length);
+    setIndex((prev) => (prev + 1) % mainImages.length);
     resetTimer();
   };
 
   const resetTimer = () => {
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
-      setIndex((prev) => (prev + 1) % heroImages.length);
+      setIndex((prev) => (prev + 1) % mainImages.length);
     }, 5000);
   };
 
@@ -61,7 +68,7 @@ const MainPage = () => {
       </div>
       {/* 상단 큰 슬라이드 블록 */}
       <div className={`${styles.heroBanner} ${styles.slideInUp}`}>
-        {heroImages.map((img, i) => (
+        {mainImages.map((img, i) => (
           <div
             key={i}
             className={`${styles.slideImage} ${i === index ? styles.active : ''}`}
