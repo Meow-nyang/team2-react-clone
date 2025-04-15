@@ -39,8 +39,10 @@ const StrategyTable = () => {
         <tbody>
           <tr className={styles.centerRow}>
             <th className={styles.label}>추진 기반 체계</th>
-            <td colSpan="2" className={styles.footer}>
+            <td colSpan="2" className={styles.botItem}>
+              <div  className={styles.footer}>
               Strengthen & Expand the ESG Management System
+              </div>
             </td>
           </tr>
         </tbody>
