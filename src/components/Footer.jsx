@@ -215,7 +215,9 @@ const Footer = () => {
           <li>
             ABOUT SPC
             <ul className={styles.innerItem}>
-              <li>SPC WAY</li>
+              <li>
+                <a href='/about'>SPC WAY</a>
+              </li>
               <li>R&D</li>
               <li>관계사</li>
               <li>글로벌</li>
@@ -250,17 +252,21 @@ const Footer = () => {
           <li>
             ESG
             <ul className={styles.innerItem}>
-              <li>ESG경영</li>
+              <li>
+                <a href='/esg/management'>ESG경영</a>
+              </li>
               <li>정도경영</li>
               <li>안전경영</li>
               <li>행복한 재단</li>
-              <li>사회공헌헌</li>
+              <li>사회공헌</li>
             </ul>
           </li>
           <li>
             SUPPORT
             <ul className={styles.innerItem}>
-              <li>가맹문의</li>
+              <li>
+                <a href='/Support'>가맹문의</a>
+              </li>
               <li>위치안내</li>
               <li>문의하기</li>
             </ul>

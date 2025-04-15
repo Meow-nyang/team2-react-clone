@@ -7,7 +7,7 @@ const RootLayout = () => {
   return (
     <div>
       <Header />
-      <main style={{ minHeight: '70vh', padding: '2rem', paddingTop: '30px' }}>
+      <main style={{ minHeight: '70vh', padding: '2rem', paddingTop: '80px' }}>
         {/* 페이지 내용 */}
         <Outlet />
       </main>

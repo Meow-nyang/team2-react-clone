@@ -1,8 +1,5 @@
 import React from 'react';
 import styles from '../styles/Philosophy.module.scss';
-import philosophy1 from '../assets/images/philo01.webp';
-import philosophy2 from '../assets/images/philo02.webp';
-import philosophy3 from '../assets/images/philo03.webp';
 
 const Philosophy = () => {
   return (
