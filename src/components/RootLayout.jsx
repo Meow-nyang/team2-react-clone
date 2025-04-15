@@ -5,14 +5,14 @@ import { Outlet } from 'react-router-dom';
 
 const RootLayout = () => {
   return (
-    <>
+    <div>
       <Header />
-      <main style={{ minHeight: '70vh', padding: '2rem', paddingTop: '80px' }}>
+      <main style={{ minHeight: '70vh', padding: '2rem', paddingTop: '30px' }}>
         {/* 페이지 내용 */}
         <Outlet />
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -4,6 +4,8 @@ import RootLayout from '../components/RootLayout';
 import AboutPage from '../pages/AboutPage';
 import EsgManage from '../pages/EsgManagePage';
 import EsgReport from '../pages/EsgReportPage';
+import SupportPage from '../pages/SupportPage';
+import MainPage from '../pages/MainPage';
 
 export const routes = createBrowserRouter([
   {
@@ -12,6 +14,10 @@ export const routes = createBrowserRouter([
     children: [
       {
         index: true,
+        element: <MainPage />,
+      },
+      {
+        path: 'about',
         element: <AboutPage />,
       },
       {
@@ -21,6 +27,10 @@ export const routes = createBrowserRouter([
       {
         path: 'esg/esgreport',
         element: <EsgReport />,
+      },
+      {
+        path: 'Support',
+        element: <SupportPage />,
       },
     ],
   },

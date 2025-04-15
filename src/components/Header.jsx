@@ -3,6 +3,7 @@ import styles from '../styles/Header.module.scss';
 import { Link } from 'react-router-dom';
 import HeaderList from './HeaderList';
 import LanguageSelector from './LanguageSelector';
+import logo from '../assets/images/SPC_logo_core_alt_color-removebg-preview.png';
 
 const Header = () => {
   const [isHoverMenu, setIsHoverMenu] = useState(false);
@@ -15,7 +16,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link to='/' className={styles.logo}>
-          SPC
+          <img src={logo} alt='SPC 로고' />
         </Link>
         <nav className={styles.nav}>
           <ul className={styles.right} onMouseEnter={() => handleMouseOn(true)}>
@@ -59,12 +60,12 @@ const Header = () => {
               <LanguageSelector />
             </li>
           </ul>
-          {isHoverMenu && (
-            <div className={styles.dropdown}>
-              <HeaderList onMouse={handleMouseOn} />
-            </div>
-          )}
         </nav>
+        {isHoverMenu && (
+          <div className={styles.dropdown}>
+            <HeaderList onMouse={handleMouseOn} />
+          </div>
+        )}
       </div>
     </header>
   );

@@ -9,16 +9,19 @@
   border-top: 1px solid #eee;
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -3%;
   width: 100%;
   z-index: 1000;
+
+  transform: translateX(10px);
 }
 
 .column {
   display: flex;
   flex-direction: column;
-  margin: 0 2rem;
-  min-width: 120px;
+  align-items: center;
+  margin: 0 1.15rem;
+  min-width: 40px;
 }
 
 .title {
@@ -38,9 +41,14 @@
   margin-bottom: 0.5rem;
 
   a {
+    display: inline-block;
+    padding: 7px;
+    border-radius: 1em;
     color: #333;
     text-decoration: none;
     font-size: 0.95rem;
+
+    width: 80px;
 
     &:hover {
       background: lightgray;
