@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from '../styles/MainPage.module.scss';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from '../components/LanguageSelector';
 
 // 이미지 import (src/assets/images 기준)
 import parisBaguette from '../assets/images/parisBaqeutte.webp';
@@ -9,28 +11,25 @@ import pascucci from '../assets/images/pasqucci.webp';
 
 const heroImages = [parisBaguette, baskinRobbins, dunkin, pascucci];
 
-const brands = [
-  {
-    title: '파리바게뜨',
-    image: parisBaguette,
-  },
-  {
-    title: '배스킨라빈스',
-    image: baskinRobbins,
-  },
-  {
-    title: '던킨',
-    image: dunkin,
-  },
-  // {
-  //   title: '파스쿠찌',
-  //   image: pascucci,
-  // },
-];
-
 const MainPage = () => {
   const [index, setIndex] = useState(0);
   const intervalRef = useRef(null);
+  const { t } = useTranslation();
+
+  const brands = [
+    {
+      title: t('parisBaguette'),
+      image: parisBaguette,
+    },
+    {
+      title: t('baskinRobbins'),
+      image: baskinRobbins,
+    },
+    {
+      title: t('dunkin'),
+      image: dunkin,
+    },
+  ];
 
   const goPrev = () => {
     setIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length);
@@ -56,6 +55,10 @@ const MainPage = () => {
 
   return (
     <div className={styles.supportPage}>
+      {/* 언어 선택 드롭다운 */}
+      <div style={{ position: 'absolute', top: 20, right: 20 }}>
+        <LanguageSelector />
+      </div>
       {/* 상단 큰 슬라이드 블록 */}
       <div className={`${styles.heroBanner} ${styles.slideInUp}`}>
         {heroImages.map((img, i) => (
@@ -74,7 +77,7 @@ const MainPage = () => {
         </button>
 
         <div className={styles.heroContent}>
-          <h2 className={styles.fadeSlideUp}>일상을 맛있게 행복하게</h2>
+          <h2 className={styles.fadeSlideUp}>{t('mainTitle')}</h2>
           <p className={styles.fadeSlideDown}>Happiness in every bite</p>
         </div>
       </div>

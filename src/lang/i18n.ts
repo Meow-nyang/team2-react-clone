@@ -16,7 +16,6 @@ const resource = {
 i18n.use(initReactI18next).init({
   resources: resource,
   lng: 'ko',
-  //초기값
   fallbackLng: 'ko',
   debug: true,
   defaultNS: 'translations',
