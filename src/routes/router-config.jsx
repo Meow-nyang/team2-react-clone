@@ -6,6 +6,7 @@ import EsgReport from '../pages/EsgReportPage';
 import SupportPage from '../pages/SupportPage';
 import MainPage from '../pages/MainPage';
 import AboutSpc from '../pages/AboutSpc';
+import SPCESGPage from '../components/SPCESGPage';
 
 export const routes = createBrowserRouter([
   {
