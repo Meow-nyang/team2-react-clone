@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from '../styles/CategoryNav.module.scss';
+import { useTranslation } from 'react-i18next';
 
 const CategoryNav = () => {
+  const { t } = useTranslation();
+
   const location = useLocation();
+
   const currentPath = location.pathname;
 
   return (
@@ -12,7 +16,7 @@ const CategoryNav = () => {
         <button
           className={`${styles.categoryBtn} ${currentPath === '/esg/management' ? styles.active : ''}`}
         >
-          ESG경영 체계
+          {t('esgManageBtn')}
         </button>
       </Link>
 
@@ -20,7 +24,7 @@ const CategoryNav = () => {
         <button
           className={`${styles.categoryBtn} ${currentPath === '/esg/esgreport' ? styles.active : ''}`}
         >
-          지속가능경영보고서
+          {t('esgReportBtn')}
         </button>
       </Link>
     </div>
