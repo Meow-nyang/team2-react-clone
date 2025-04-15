@@ -1,8 +1,11 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import RootLayout from '../components/RootLayout';
+import EsgManage from '../pages/EsgManagePage';
+import EsgReport from '../pages/EsgReportPage';
 import SupportPage from '../pages/SupportPage';
 import MainPage from '../pages/MainPage';
+import AboutSpc from '../pages/AboutSpc';
 
 export const routes = createBrowserRouter([
   {
@@ -14,8 +17,16 @@ export const routes = createBrowserRouter([
         element: <MainPage />,
       },
       {
-        path: 'ESG',
-        //element: <ESGPage />,
+        path: 'about',
+        element: <AboutSpc />,
+      },
+      {
+        path: 'esg/management',
+        element: <EsgManage />,
+      },
+      {
+        path: 'esg/esgreport',
+        element: <EsgReport />,
       },
       {
         path: 'Support',

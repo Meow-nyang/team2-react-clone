@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styles from '../styles/Header.module.scss';
 import { Link } from 'react-router-dom';
 import HeaderList from './HeaderList';
+import LanguageSelector from './LanguageSelector';
+import logo from '../assets/images/SPC_logo_core_alt_color-removebg-preview.png';
 
 const Header = () => {
   const [isHoverMenu, setIsHoverMenu] = useState(false);
@@ -14,7 +16,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link to='/' className={styles.logo}>
-          SPC
+          <img src={logo} alt='SPC 로고' />
         </Link>
         <nav className={styles.nav}>
           <ul className={styles.right} onMouseEnter={() => handleMouseOn(true)}>
@@ -31,30 +33,39 @@ const Header = () => {
               <Link to='/spcNow'>SPC NOW</Link>
             </li>
             <li>
-              <Link to='/esg'>ESG</Link>
+              {/* /esg -> /esg/management로 수정함  */}
+              <Link to='/esg/management'>ESG</Link>
             </li>
             <li>
               <Link to='/support'>SUPPORT</Link>
             </li>
           </ul>
+
           <ul className={styles.left}>
             <li>
-              <button className={styles.career}>CARRERS</button>
+              <button
+                className={styles.career}
+                onClick={() =>
+                  window.open(
+                    'https://spc.recruiter.co.kr/career/home',
+                    '_blank',
+                    'noopener,noreferrer',
+                  )
+                }
+              >
+                CAREERS
+              </button>
             </li>
             <li>
-              <select>
-                <option value='korean'>KO</option>
-                <option value='english'>EN</option>
-                <option value='chinese'>CN</option>
-              </select>
+              <LanguageSelector />
             </li>
           </ul>
-          {isHoverMenu && (
-            <div className={styles.dropdown}>
-              <HeaderList onMouse={handleMouseOn} />
-            </div>
-          )}
         </nav>
+        {isHoverMenu && (
+          <div className={styles.dropdown}>
+            <HeaderList onMouse={handleMouseOn} />
+          </div>
+        )}
       </div>
     </header>
   );
