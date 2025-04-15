@@ -20,29 +20,24 @@ const MainPage = () => {
   const intervalRef = useRef(null);
   const { t } = useTranslation();
 
-const brands = [
-  {
-    title: '헤리티지',
-    image: parisBaguette,
-  },
-  {
-    title: 'SPC WAY',
-    image: baskinRobbins,
-  },
-  {
-    title: 'ESG',
-    image: dunkin,
-  },
-  // {
-  //   title: '파스쿠찌',
-  //   image: pascucci,
-  // },
-];
-
-const MainPage = () => {
-  const [index, setIndex] = useState(0);
-  const intervalRef = useRef(null);
-
+  const brands = [
+    {
+      title: '헤리티지',
+      image: parisBaguette,
+    },
+    {
+      title: 'SPC WAY',
+      image: baskinRobbins,
+    },
+    {
+      title: 'ESG',
+      image: dunkin,
+    },
+    // {
+    //   title: '파스쿠찌',
+    //   image: pascucci,
+    // },
+  ];
   const goPrev = () => {
     setIndex((prev) => (prev - 1 + mainImages.length) % mainImages.length);
     resetTimer();
