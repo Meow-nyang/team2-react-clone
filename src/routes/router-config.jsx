@@ -2,6 +2,7 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import RootLayout from '../components/RootLayout';
 import SupportPage from '../pages/SupportPage';
+import MainPage from '../pages/MainPage';
 
 export const routes = createBrowserRouter([
   {
@@ -10,7 +11,7 @@ export const routes = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <SupportPage />,
+        element: <MainPage />,
       },
       {
         path: 'ESG',
@@ -18,7 +19,7 @@ export const routes = createBrowserRouter([
       },
       {
         path: 'Support',
-        //element: <SupportPage />,
+        element: <SupportPage />,
       },
     ],
   },
