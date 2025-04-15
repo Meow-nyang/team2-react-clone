@@ -24,13 +24,13 @@ const Header = () => {
               <Link to='/about'>ABOUT SPC</Link>
             </li>
             <li>
-              <Link to='/history'>HISTORY</Link>
+              <Link to='/'>HISTORY</Link>
             </li>
             <li>
-              <Link to='/brand'>BRAND</Link>
+              <Link to='/'>BRAND</Link>
             </li>
             <li>
-              <Link to='/spcNow'>SPC NOW</Link>
+              <Link to='/'>SPC NOW</Link>
             </li>
             <li>
               {/* /esg -> /esg/management로 수정함  */}

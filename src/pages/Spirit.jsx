@@ -10,8 +10,9 @@ const Spirit = () => {
     <section className={styles.spirit}>
       <div className={styles.container}>
         <div className={styles.item}>
+          <img src={spirit1} alt='11' />
           <div className={styles.topItem}>
-            <img src={mark} />
+            <img src={mark} className={styles.mark} />
             <div className={styles.topText}>
               <h3>상미당(賞美堂)</h3>
               <p>
@@ -26,6 +27,7 @@ const Spirit = () => {
           </div>
         </div>
         <div className={styles.item}>
+          <img src={spirit2} alt='22' />
           <div className={styles.bottomText}>
             <h3>고객과 품질</h3>
             <p>
@@ -35,6 +37,7 @@ const Spirit = () => {
           </div>
         </div>
         <div className={styles.item}>
+          <img src={spirit3} alt='33' />
           <div className={styles.bottomText}>
             <h3>나눔과 상생</h3>
             <p>
