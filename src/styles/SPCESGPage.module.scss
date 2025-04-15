@@ -1,173 +1,160 @@
-/* styles/SPCESGPage.module.scss */
-
 .container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  font-family: 'Noto Sans KR', sans-serif;
+  position: relative;
+  background-color: #f8f8f8; /* 밝은 회색으로 변경 */
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.title {
+h1.ko {
   text-align: center;
-  margin-bottom: 50px;
+  margin: 60px auto; /* 상단 마진 조정 */
+  font-size: 2.5rem;
+  font-weight: 800;
+}
 
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
+.tabMenu {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
 
-  .menuContainer {
-    ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      padding: 0;
+.tab {
+  padding: 0.6rem 2rem;
+  border-radius: 999px;
+  background-color: #f8f8f8;
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
-      li {
-        margin: 0 15px;
-
-        a {
-          text-decoration: none;
-          color: #333;
-          font-weight: bold;
-
-          &:hover,
-          &.active {
-            color: #0078ff;
-            border-bottom: 2px solid #0078ff;
-          }
-        }
-      }
-    }
+  &:hover {
+    background-color: #e0e0e0;
+    color: #111;
   }
 }
 
-.esgManagementSection {
-  padding: 50px 20px;
-  background-color: #f7f7f7;
+.active {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+  font-weight: 700;
+}
 
-  .sectionTitle {
-    text-align: center;
-    margin-bottom: 30px;
+.background-wrap {
+  background: url('../assets/images/esg.webp') no-repeat center / cover;
+  padding: 3rem 1rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: all 0.3s ease;
 
-    h3 {
-      font-size: 2rem;
-      color: #333;
-    }
+  &:hover {
+    opacity: 0.85;
+    transform: scale(1.03);
+  }
+}
+
+/* ✅ 추가: section 내용 정렬 및 텍스트 스타일 */
+.sectionContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.imageContainer {
+  flex: 1;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+}
+
+.sectionDescription {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  flex: 1;
+  text-align: left;
+  padding-top: 1rem;
+}
+
+/* ✅ 추가: 이미지와 텍스트 묶음 스타일 */
+.imageTextBlock {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ✅ 반응형 추가 */
+@media screen and (max-width: 768px) {
+  h1.ko {
+    font-size: 1.8rem;
+    margin: 60px auto;
+  }
+
+  .tabMenu {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .tab {
+    width: 100%;
+    max-width: 240px;
+    font-size: 0.95rem;
+    padding: 0.5rem 1.4rem;
   }
 
   .sectionContent {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-
-    .imageContainer {
-      margin-bottom: 20px;
-
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-    }
-
-    .sectionDescription {
-      font-size: 1.1rem;
-      color: #555;
-      line-height: 1.8;
-      white-space: pre-line;
-    }
+    flex-direction: column; /* 세로 배치 */
+    align-items: center; /* 가운데 정렬 */
   }
-}
 
-.sustainabilityReportSection {
-  padding: 50px 20px;
-  background-color: #fff;
+  .sectionDescription {
+    font-size: 0.95rem;
+    text-align: center; /* 텍스트 가운데 정렬 */
+    padding-top: 1rem;
+  }
 
   .background-wrap {
-    background-image: url('../assets/images/esg.webp');
-    background-size: cover;
-    background-position: center;
-    padding: 80px 20px;
-    text-align: center;
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
-    :hover
+    font-size: 1rem;
+    padding: 2rem 1rem;
+    border-radius: 20px;
+  }
 
-    span {
-      background: rgba(0, 0, 0, 0.4);
-      padding: 10px 20px;
-      border-radius: 8px;
-      display: inline-block;
-    }
+  .imageTextBlock {
+    margin-bottom: 1.5rem; /* 모바일에서 간격 조정 */
+  }
+}
+/* SPCESGPage.module.scss */
+
+/* 기존 스타일 */
+
+.hoverImage {
+  transition: transform 0.3s ease-in-out; /* 부드러운 애니메이션 효과를 위한 transition 추가 */
+
+  &:hover {
+    transform: scale(1.05); /* 호버 시 1.05배 크기로 확대 */
+    cursor: pointer; /* 호버 시 커서를 포인터로 변경하여 클릭 가능함을 나타냄 */
   }
 }
 
-.happyHealthySection {
-  padding: 50px 20px;
-  background-color: #f7f7f7;
+/* 나머지 스타일 */
 
-  .sectionTitle {
-    text-align: center;
-    margin-bottom: 30px;
-
-    h3 {
-      font-size: 2rem;
-      color: #333;
-    }
-  }
-
-  .sectionContent {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-
-    .sectionDescription {
-      font-size: 1.1rem;
-      color: #555;
-      line-height: 1.8;
-      margin-bottom: 40px;
-    }
-  }
-
-  .strategyTable {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 20px;
-    text-align: left;
-
-    .strategyColumn {
-      flex: 1;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
-      h3 {
-        font-size: 1.3rem;
-        margin-bottom: 15px;
-      }
-
-      ul {
-        list-style: disc;
-        padding-left: 20px;
-
-        li {
-          margin-bottom: 10px;
-          font-size: 1rem;
-          color: #444;
-        }
-      }
-    }
-  }
-
-  .footer {
-    text-align: center;
-    margin-top: 40px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #0078ff;
-  }
+.sectionContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
 }

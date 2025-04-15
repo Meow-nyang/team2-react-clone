@@ -1,60 +1,77 @@
 .container {
     position: relative;
-    background-color: #f8f8f8;
-    padding: 40px;
-    border-radius: 20px;
+    background-color: #f8f8f8; /* 기존과 동일 */
+    padding: 2.5rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   }
   
   .table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
-    background-color: #fff;
-    border-radius: 10px;
+    background-color: #f8f8f8; /* 테이블 배경을 밝은 회색으로 변경 (이미지 참조) */
+    border-radius: 0.625rem;
     overflow: hidden;
     text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  }
   
-    th,
-    td {
-      padding: 20px;
-      vertical-align: top;
-      border-bottom: 1px solid #e0e0e0;
-      font-size: 16px;
-      line-height: 1.6;
-    }
+  .table th,
+  .table td {
+    padding: 1.25rem;
+    vertical-align: top;
+    border-bottom: 1px solid #e0e0e0; /* 기존과 동일 */
+    font-size: 1rem;
+    line-height: 1.6;
+  }
   
-    ul {
-      padding-left: 20px;
-      margin: 0;
+  .table tr:last-child td,
+  .table tr:last-child th {
+    border-bottom: none;
+  }
   
-      li {
-        margin-bottom: 6px;
-      }
-    }
+  .table ul {
+    padding-left: 1.25rem;
+    margin: 0;
+  }
+  
+  .table ul li {
+    margin-bottom: 0.375rem;
+  }
+  
+  .table ul li:last-child {
+    margin-bottom: 0;
   }
   
   .label {
-    width: 160px;
-    background-color: #00a5df;
-    color: white;
-    font-weight: bold;
+    display: inline-block;
+    width: 11.25rem;
     text-align: center;
     vertical-align: middle;
-    border-right: 1px solid #fff;
+    padding: 0.625rem 1rem;
+    font-weight: 600;
+    background-color: #00AEEF; /* 이미지의 파란색으로 변경 */
+    color: #f5f5f5; /* 기존과 동일 */
+    font-size: 0.9375rem;
+    border-radius: 999px;
+    border: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
   }
   
-  .centerRow {
-    th,
-    td {
-      text-align: center;
-      background-color: #c5c5c5;
-      color: #fff;
-      font-weight: bold;
-    }
+  
+  .centerRow th,
+  .centerRow td {
+    text-align: center;
+    background-color: #00AEEF; /* 이미지의 파란색으로 변경 */
+    color: #fff; /* 기존과 동일 */
+    font-weight: 600;
   }
   
   .footer {
-    font-size: 18px;
+    font-size: 1.125rem;
+    margin-top: 1.5rem;
   }
   
   .centerBox {
@@ -62,23 +79,61 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -55%);
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background: white; /* 기존과 동일 */
+    padding: 1.875rem;
+    border-radius: 1.25rem;
+  
     text-align: center;
-    width: 300px;
+    width: 18.75rem;
     z-index: 2;
-  
-    h2 {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-  
-    p {
-      font-size: 14px;
-      line-height: 1.6;
-    }
   }
   
+  
+  .centerBox h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #333; /* 기존과 동일 */
+  }
+  
+  .centerBox p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #555; /* 기존과 동일 */
+  }
+  
+  /* 테이블 헤더 스타일 (이미지 참조) */
+  .table thead th {
+    background-color: #00AEEF;
+    color: #fff;
+    text-align: center; /* 필요에 따라 가운데 정렬 */
+  }
+  
+  /* 테이블 데이터 셀 스타일 (이미지 참조) */
+  .table tbody td {
+    background-color: #fff;
+    color: #333; /* 또는 원하시는 텍스트 색상 */
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 1.5rem;
+    }
+  
+    .table th,
+    .table td {
+      padding: 1rem;
+      font-size: 0.9375rem;
+    }
+  
+    .label {
+      width: auto;
+      padding: 0.5rem 0.875rem;
+      font-size: 0.875rem;
+    }
+  
+    .centerBox {
+      width: calc(100% - 3rem);
+      padding: 1.5rem;
+    }
+  }
