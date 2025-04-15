@@ -3,6 +3,7 @@ import styles from '../styles/Header.module.scss';
 import { Link } from 'react-router-dom';
 import HeaderList from './HeaderList';
 import LanguageSelector from './LanguageSelector';
+import logo from '../assets/images/SPC_logo_core_alt_color-removebg-preview.png';
 
 const Header = () => {
   const [isHoverMenu, setIsHoverMenu] = useState(false);

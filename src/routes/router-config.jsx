@@ -14,6 +14,10 @@ export const routes = createBrowserRouter([
     children: [
       {
         index: true,
+        element: <MainPage />,
+      },
+      {
+        path: 'about',
         element: <AboutPage />,
       },
       {
@@ -23,7 +27,6 @@ export const routes = createBrowserRouter([
       {
         path: 'esg/esgreport',
         element: <EsgReport />,
-        element: <MainPage />,
       },
       {
         path: 'Support',
