@@ -3,24 +3,29 @@ import styles from '../styles/Philosophy.module.scss';
 import img1 from '../assets/images/philo01.webp';
 import img2 from '../assets/images/philo02.webp';
 import img3 from '../assets/images/philo03.webp';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from '../components/LanguageSelector';
+import { Trans } from 'react-i18next';
 
 const Philosophy = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={styles.philosophy}>
+      <div style={{ position: 'absolute', top: 20, right: 20 }}>
+        <LanguageSelector />
+      </div>
       <div className={styles.philosophyList}>
         <div className={styles.item}>
           <img src={img1} alt='11' className={styles.top} />
           <br />
           <br />
-          <ab>경영철학</ab>
+          <ab>{t('philosophy')}</ab>
           <h4>
-            최고의 품질과 고객중심, <br />
-            창의적 도전으로 세상을 행복하게 한다.
+            <Trans i18nKey='h4' />
           </h4>
           <p>
-            경영철학은 최고경양자의 신념이자 우리 그룹의 존재 이유입니다. <br />
-            SPC그룹은 창의적 도전정신을 바탕으로 <br />
-            맛있고 건강한 제품을 통해 언제나 고객의 행복과 함께하겠습니다.
+            <Trans i18nKey='p' />
           </p>
         </div>
 

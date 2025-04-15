@@ -2,5 +2,17 @@
   "esgTitle": "ESG Management",
   "reportTitle": "SPC Group Sustainability Report 2024",
   "reportDescription": "SPC Group has established ESG strategies to pursue the happiness and health of all stakeholders \nthrough the highest quality and creative challenges, considering the foundation for growth and \nproduct competitiveness from the ESG perspective.",
-  "downloadReport": "Download Report"
+  "downloadReport": "Download Report",
+  "esgManageBtn": "ESG Management System",
+  "esgReportBtn": "Sustainability Report",
+
+  "mainTitle": "Tasty and Happy Everyday",
+  "parisBaguette": "Paris Baguette",
+  "baskinRobbins": "Baskin Robbins",
+  "dunkin": "Dunkin",
+
+  "philosophy": "MANAGEMENT",
+  "sanmidang": "SANMIDANG SPIRIT",
+  "h4": "We make the world happy <br />with the best quality, customer focus, <br />and creative initiatives.",
+  "p": "The management philosophy is the CEO’s belief and <br />the reason for our group’s existence.<br /> SPC Group will always support customers’ happiness with <br />its delicious and healthy products based on <br />its creative challenging spirit."
 }

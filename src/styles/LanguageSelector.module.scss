@@ -5,15 +5,20 @@
   align-items: center;
 
   .icon {
-    font-size: 12px;
     cursor: pointer;
+  }
+  .icon img {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
   }
 
   .options {
     display: none;
     position: absolute;
-    top: 20px;
-    right: 0;
+    top: 15px;
+    right: 50%;
+    transform: translateX(50%);
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 6px;
