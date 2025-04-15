@@ -13,9 +13,7 @@ import m2 from '../assets/images/coffee.webp';
 import m3 from '../assets/images/foods.webp';
 import m4 from '../assets/images/icecream.webp';
 
-const heroImages = [parisBaguette, baskinRobbins, dunkin];
 const mainImages = [m1, m2, m3, m4];
-const heroImages = [parisBaguette, baskinRobbins, dunkin, pascucci];
 
 const MainPage = () => {
   const [index, setIndex] = useState(0);
