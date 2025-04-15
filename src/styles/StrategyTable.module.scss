@@ -3,20 +3,23 @@
 .container {
   position: relative;
   //background-color: #f8f8f8; /* 기존과 동일 */
-  padding: 2.5rem;
   border-radius: 1.25rem;
   //box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .table {
+  padding: 3rem 3rem;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  //background-color: #f8f8f8; /* 테이블 배경을 밝은 회색으로 변경 (이미지 참조) */
+  background-color: #f8f8f8; /* 테이블 배경을 밝은 회색으로 변경 (이미지 참조) */
   border-radius: 0.625rem;
   overflow: hidden;
   text-align: left;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.innerLi {
 }
 
 .table th,
@@ -53,7 +56,7 @@
   vertical-align: middle;
   padding: 0.8rem 1rem; /* 상하 패딩 0.8rem으로 조정 */
   font-weight: 600;
-  background-color: #00AEEF; /* 이미지의 파란색으로 변경 */
+  background-color: #00aeef; /* 이미지의 파란색으로 변경 */
   //color: #f5f5f5; /* 기존과 동일 */
   font-size: 0.9375rem;
   border-radius: 999px;
@@ -62,11 +65,10 @@
   transition: background-color 0.2s ease;
 }
 
-
 .centerRow th,
 .centerRow td {
   text-align: center;
-  background-color: #00AEEF; /* 이미지의 파란색으로 변경 */
+  background-color: #00aeef; /* 이미지의 파란색으로 변경 */
   color: lightgray; /* 기존과 동일 */
   font-weight: 600;
   padding: 0.8rem; /* 상하좌우 패딩 0.8rem으로 조정 */
@@ -78,11 +80,11 @@
   width: 100%;
   height: 100%;
   padding: 20px 0;
-  background:LightGray; 
+  background: LightGray;
   border-radius: 0.5em;
 }
 
-.botItem{
+.botItem {
   background: #00000080;
 }
 
@@ -95,11 +97,10 @@
   padding: 1.875rem;
   border-radius: 1.25rem;
 
-  text-align:center;
-  width: 18.75rem;
+  text-align: center;
+  width: 12.75rem;
   z-index: 2;
 }
-
 
 .centerBox h2 {
   font-size: 1.25rem;
@@ -118,7 +119,7 @@
 
 /* 테이블 헤더 스타일 (이미지 참조) */
 .table thead th {
-  background-color: #00AEEF;
+  background-color: #00aeef;
   color: #fff;
   text-align: center; /* 필요에 따라 가운데 정렬 */
   padding: 0.4rem; /* 상하좌우 패딩 1rem으로 유지 (원하시는 대로 조절 가능) */

@@ -23,7 +23,7 @@ export const routes = createBrowserRouter([
       },
       {
         path: 'esg/management',
-        element: <EsgManage />,
+        element: <SPCESGPage />,
       },
       {
         path: 'esg/esgreport',
