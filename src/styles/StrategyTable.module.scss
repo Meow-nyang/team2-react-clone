@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/npm/pretendard@latest/dist/web/static/pretendard.css');
+
 .container {
   position: relative;
   background-color: #f8f8f8; /* 기존과 동일 */
@@ -73,6 +75,7 @@
 .footer {
   font-size: 1.125rem;
   margin-top: 1.5rem;
+  background-color:LightGray; 
 }
 
 .centerBox {
@@ -110,7 +113,7 @@
   background-color: #00AEEF;
   color: #fff;
   text-align: center; /* 필요에 따라 가운데 정렬 */
-  padding: 1rem; /* 상하좌우 패딩 1rem으로 유지 (원하시는 대로 조절 가능) */
+  padding: 0.4rem; /* 상하좌우 패딩 1rem으로 유지 (원하시는 대로 조절 가능) */
 }
 
 /* 테이블 데이터 셀 스타일 (이미지 참조) */
