@@ -8,12 +8,17 @@
     font-size: 12px;
     cursor: pointer;
   }
+  .icon img {
+    width: 30px;
+    height: 30px;
+  }
 
   .options {
     display: none;
     position: absolute;
     top: 20px;
-    right: 0;
+    right: 50%;
+    transform: translateX(50%);
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 6px;
