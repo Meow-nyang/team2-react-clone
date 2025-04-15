@@ -68,12 +68,16 @@
 }
 
 .career {
-  padding: 8px 16px;
-  border-radius: 1em;
+  padding: 4px 9px;
+  border-radius: 44px;
   border: none;
-  transition: color 0.4s ease-in-out;
+  font-weight: 600;
+  height: 28px;
   &:hover {
-    background: skyblue;
-    color: #fff;
+    transition:
+      background-color 0.5s ease-in-out,
+      color 0.5s ease-in-out;
+    background-color: #3cb4e5;
+    color: #ffffff;
   }
 }
