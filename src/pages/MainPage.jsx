@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from '../styles/MainPage.module.scss';
 
 // 이미지 import (src/assets/images 기준)
 import parisBaguette from '../assets/images/parisBaqeutte.webp';
 import baskinRobbins from '../assets/images/baskinrabins.webp';
 import dunkin from '../assets/images/dunkin.webp';
-// import pascucci from '../assets/images/pasqucci.webp';
+import pascucci from '../assets/images/pasqucci.webp';
+
+const heroImages = [parisBaguette, baskinRobbins, dunkin, pascucci];
 
 const brands = [
   {
@@ -27,10 +29,50 @@ const brands = [
 ];
 
 const MainPage = () => {
+  const [index, setIndex] = useState(0);
+  const intervalRef = useRef(null);
+
+  const goPrev = () => {
+    setIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+    resetTimer();
+  };
+
+  const goNext = () => {
+    setIndex((prev) => (prev + 1) % heroImages.length);
+    resetTimer();
+  };
+
+  const resetTimer = () => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setIndex((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+  };
+
+  useEffect(() => {
+    resetTimer();
+    return () => clearInterval(intervalRef.current); // 언마운트 시 제거
+  }, []);
+
   return (
     <div className={styles.supportPage}>
-      {/* 상단 큰 블록 */}
+      {/* 상단 큰 슬라이드 블록 */}
       <div className={`${styles.heroBanner} ${styles.slideInUp}`}>
+        {heroImages.map((img, i) => (
+          <div
+            key={i}
+            className={`${styles.slideImage} ${i === index ? styles.active : ''}`}
+            style={{ backgroundImage: `url(${img})` }}
+          />
+        ))}
+
+        <button className={`${styles.arrow} ${styles.left}`} onClick={goPrev}>
+          &lt;
+        </button>
+        <button className={`${styles.arrow} ${styles.right}`} onClick={goNext}>
+          &gt;
+        </button>
+
         <div className={styles.heroContent}>
           <h2 className={styles.fadeSlideUp}>일상을 맛있게 행복하게</h2>
           <p className={styles.fadeSlideDown}>Happiness in every bite</p>
