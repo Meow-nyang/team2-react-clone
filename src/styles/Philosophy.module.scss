@@ -85,13 +85,6 @@
           margin-bottom: 1.5rem;
           z-index: 1;
         }
-
-        p {
-          line-height: 1rem;
-          font-size: 0.8rem;
-          z-index: 1;
-          font-weight: 500;
-        }
       }
       &:nth-child(2) {
         flex: 1 1 45%; // 2개 아이템이 같은 크기
@@ -159,4 +152,18 @@
 .top {
   width: 100%;
   height: 100%;
+}
+
+.innerEnP {
+  line-height: 1.2rem;
+  font-size: 0.8rem;
+  z-index: 1;
+  font-weight: 500;
+}
+
+.innerP {
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  z-index: 1;
+  font-weight: 500;
 }

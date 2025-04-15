@@ -10,6 +10,8 @@ import { Trans } from 'react-i18next';
 const Philosophy = () => {
   const { t } = useTranslation();
 
+  console.log(t('p').length);
+
   return (
     <section className={styles.philosophy}>
       <div style={{ position: 'absolute', top: 20, right: 20 }}>
@@ -24,7 +26,7 @@ const Philosophy = () => {
           <h4>
             <Trans i18nKey='h4' />
           </h4>
-          <p>
+          <p className={t('p').length > 150 ? styles.innerEnP : styles.innerP}>
             <Trans i18nKey='p' />
           </p>
         </div>
