@@ -1,6 +1,8 @@
+/* styles/SPCESGPage.module.scss */
+
 .container {
   position: relative;
-  background-color: #f8f8f8; /* 밝은 회색으로 변경 */
+  background-color: #f8f8f8;
   padding: 2.5rem;
   border-radius: 1.25rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -8,7 +10,7 @@
 
 h1.ko {
   text-align: center;
-  margin: 60px auto; /* 상단 마진 조정 */
+  margin: 60px auto;
   font-size: 2.5rem;
   font-weight: 800;
 }
@@ -62,7 +64,75 @@ h1.ko {
   }
 }
 
-/* ✅ 추가: section 내용 정렬 및 텍스트 스타일 */
+/* ESG 경영체계 섹션 (좌우 배치 스타일) */
+.esgManagementSectionFull {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.sectionContentFull {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.imageContainerFull {
+  flex: 1;
+  text-align: center;
+}
+
+.textContainerFull {
+  flex: 1;
+}
+
+.sectionDescriptionFull {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: left;
+  white-space: pre-line;
+}
+
+/* 지속가능경영보고서 섹션 (하단 중앙 배치 스타일) */
+.sustainabilityReportBottom {
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.background-wrap-bottom {
+  background-image: url('../assets/images/esg.webp');
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  margin: 60px auto 20px;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    transform: scale(1.04);
+  }
+}
+
+.contentBottom {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.4;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  color: #fff;
+}
+
+/* 기존 스타일 유지 */
 .sectionContent {
   display: flex;
   align-items: flex-start;
@@ -73,12 +143,10 @@ h1.ko {
 .imageContainer {
   flex: 1;
   text-align: center;
-
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 20px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .sectionDescription {
@@ -90,13 +158,15 @@ h1.ko {
   padding-top: 1rem;
 }
 
-/* ✅ 추가: 이미지와 텍스트 묶음 스타일 */
 .imageTextBlock {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  order: 1;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
 }
 
-/* ✅ 반응형 추가 */
 @media screen and (max-width: 768px) {
   h1.ko {
     font-size: 1.8rem;
@@ -117,44 +187,90 @@ h1.ko {
   }
 
   .sectionContent {
-    flex-direction: column; /* 세로 배치 */
-    align-items: center; /* 가운데 정렬 */
+    flex-direction: column;
+    align-items: center;
   }
 
   .sectionDescription {
     font-size: 0.95rem;
-    text-align: center; /* 텍스트 가운데 정렬 */
+    text-align: center;
     padding-top: 1rem;
   }
 
-  .background-wrap {
-    font-size: 1rem;
-    padding: 2rem 1rem;
-    border-radius: 20px;
+  .imageTextBlock {
+    margin-bottom: 1.5rem;
   }
 
-  .imageTextBlock {
-    margin-bottom: 1.5rem; /* 모바일에서 간격 조정 */
+  .sectionContentFull {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imageContainerFull {
+    margin-bottom: 20px;
+  }
+
+  .textContainerFull {
+    text-align: center;
+  }
+
+  .background-wrap-bottom {
+    padding: 2rem 1rem;
+    &:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+  }
+
+  .contentBottom {
+    font-size: 1.5rem;
+    padding: 1rem;
   }
 }
-/* SPCESGPage.module.scss */
 
 /* 기존 스타일 */
 
 .hoverImage {
-  transition: transform 0.3s ease-in-out; /* 부드러운 애니메이션 효과를 위한 transition 추가 */
+  transition: transform 0.3s ease-in-out;
 
   &:hover {
-    transform: scale(1.05); /* 호버 시 1.05배 크기로 확대 */
-    cursor: pointer; /* 호버 시 커서를 포인터로 변경하여 클릭 가능함을 나타냄 */
+    transform: scale(1.05);
+    cursor: pointer;
   }
 }
 
-/* 나머지 스타일 */
+.imageContainer img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
 
-.sectionContent {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-  margin-top: 2rem;
+/* 지속가능경영보고서 축소 버전 스타일 */
+.sustainabilityReportSmallSection {
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.background-wrap-small {
+  background: url('../assets/images/esg.webp') no-repeat center / cover;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.contentSmall {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
 }
