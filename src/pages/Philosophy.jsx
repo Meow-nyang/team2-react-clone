@@ -1,11 +1,15 @@
 import React from 'react';
 import styles from '../styles/Philosophy.module.scss';
+import img1 from '../assets/images/philo01.webp';
+import img2 from '../assets/images/philo02.webp';
+import img3 from '../assets/images/philo03.webp';
 
 const Philosophy = () => {
   return (
     <section className={styles.philosophy}>
       <div className={styles.philosophyList}>
         <div className={styles.item}>
+          <img src={img1} alt='11' className={styles.top} />
           <br />
           <br />
           <ab>경영철학</ab>
@@ -21,6 +25,8 @@ const Philosophy = () => {
         </div>
 
         <div className={styles.item}>
+          <img src={img2} alt='22' className={styles.top} />
+
           <br />
           <br />
           <ab>비전</ab>
@@ -33,6 +39,7 @@ const Philosophy = () => {
         </div>
 
         <div className={styles.item}>
+          <img src={img3} alt='33' className={styles.bot} />
           <br />
           <ab>핵심가치</ab>
           <h4>

@@ -2,12 +2,14 @@
   padding: 3rem 2rem;
   background-color: #fff;
   text-align: center;
+  overflow: hidden;
 
   .philosophyList {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+    overflow: hidden;
 
     .item {
       display: flex;
@@ -21,45 +23,60 @@
       position: relative;
       color: #fff;
 
+      overflow: hidden;
+
+      img {
+        position: absolute; /* 이미지가 글자 뒤에 오도록 설정 */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 이미지가 비율에 맞게 크기 조정 */
+        transition: transform 0.3s ease-in-out; /* 이미지 확대 효과 */
+        z-index: 0; /* 이미지가 텍스트 뒤에 있도록 설정 */
+      }
+
+      .item:hover img {
+        transform: scale(1.1) translate(-5%, -5%); /* 이미지 확대 효과, 중앙 확대 */
+      }
+
       ab {
         font-weight: 600;
         padding: 5px 10px;
         background: #3cb4e5;
         border-radius: 0.4em;
         margin-bottom: 1.8rem;
+        z-index: 1;
       }
 
       background-size: cover;
       background-position: center;
-
-      &:hover {
-        transform: translateY(-5px);
-      }
 
       .innerTag {
         width: 80%;
         display: flex;
         list-style: none;
         justify-content: space-around;
+        z-index: 1;
       }
 
       .innerBox {
         width: 30%;
         background: #00000080;
         border-radius: 2em;
+        z-index: 1;
       }
 
       .innerText {
         margin-bottom: 3rem;
+        z-index: 1;
       }
 
       // 각 이미지에 맞는 배경 설정
       &:nth-child(1) {
         flex: 1 1 45%; // 2개 아이템이 같은 크기
         height: 316px;
-        background-image: url('../assets/images/philo01.webp');
-        background-size: cover;
-        background-position: center;
+        overflow: hidden;
         h4 {
           line-height: 2.2rem;
           margin-top: 2rem;
@@ -79,10 +96,8 @@
       &:nth-child(2) {
         flex: 1 1 45%; // 2개 아이템이 같은 크기
         height: 316px;
-        background-image: url('../assets/images/philo02.webp');
-        background-size: cover;
-        background-position: center;
 
+        overflow: hidden;
         ab {
           margin-top: 2.7rem;
         }
@@ -106,9 +121,8 @@
       &:nth-child(3) {
         flex-basis: 100%;
         height: 520px;
-        background-image: url('../assets/images/philo03.webp');
-        background-size: cover;
-        background-position: center;
+
+        overflow: hidden;
 
         ab {
           margin-top: 2.5rem;
@@ -133,4 +147,16 @@
       }
     }
   }
+}
+
+.top,
+.bot {
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.top {
+  width: 100%;
+  height: 100%;
 }

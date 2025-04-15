@@ -238,7 +238,7 @@ const Footer = () => {
               <li>디저트</li>
               <li>외식/다이닝</li>
               <li>커피/음료</li>
-              <li>유통/서비스스</li>
+              <li>유통/서비스</li>
             </ul>
           </li>
           <li>
