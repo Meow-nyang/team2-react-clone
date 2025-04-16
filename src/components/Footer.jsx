@@ -33,27 +33,43 @@ const Footer = () => {
           </div>
           <ul className={styles.links}>
             <li className={styles.linksList}>
-              <a href='#'>개인정보 처리방침&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a>
+              <a
+                href='https://www.spc.co.kr/privacy/privacy-policy'
+                target='_blank'
+              >
+                개인정보 처리방침&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+              </a>
             </li>
             <li className={styles.linksList}>
-              <a href='#'>
+              <a
+                href='https://www.spc.co.kr/privacy/privacy-email'
+                target='_blank'
+              >
                 &nbsp;&nbsp;&nbsp;&nbsp;이메일수집 거부&nbsp;&nbsp;&nbsp;&nbsp;|
               </a>
             </li>
             <li className={styles.linksList}>
-              <a href='#'>
+              <a
+                href='https://happy.spc.co.kr/index_src/regist/regist01.jsp'
+                target='_blank'
+              >
                 &nbsp;&nbsp;&nbsp;&nbsp;거래희망사전등록&nbsp;&nbsp;&nbsp;|
               </a>
             </li>
           </ul>
           <ul className={styles.links}>
             <li className={styles.linksList}>
-              <a href='#'>
+              <a
+                href='https://www.spc.co.kr/privacy/privacy-video-1945'
+                target='_blank'
+              >
                 고정형 영상정보처리기기 운영관리 방침&nbsp;&nbsp;&nbsp;&nbsp;|
               </a>
             </li>
             <li className={styles.linksList}>
-              <a href='#'>&nbsp;&nbsp;&nbsp;&nbsp;공지사항</a>
+              <a href='https://www.spc.co.kr/notice' target='_blank'>
+                &nbsp;&nbsp;&nbsp;&nbsp;공지사항
+              </a>
             </li>
           </ul>
           <br />
