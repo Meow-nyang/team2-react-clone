@@ -4,7 +4,7 @@
 .container {
   position: relative;
   background-color: #fff;
-  padding: 2.5rem 0rem 0rem 0rem;
+  //padding: 1.5rem 1rem 1rem 1rem;
 }
 
 /* 메인 타이틀 */
@@ -46,7 +46,7 @@
 
 /* ESG 경영체계 전체 섹션 */
 .esgManagementSectionFull {
-  padding: 40px 20px;
+  //padding: 40px 20px;
   background-color: #f9f9f9;
 }
 
@@ -56,6 +56,7 @@
   display: flex;
   align-items: center;
  justify-content: center;
+ overflow: hidden;
   //gap: 1rem;
   flex-direction: row; /* 이미지를 왼쪽에 텍스트를 오른쪽에 배치 */
 }
@@ -94,7 +95,7 @@
   transition: transform 0.3s ease-in-out;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     cursor: pointer;
   }
 }
@@ -159,10 +160,7 @@
 
 /* 반응형 */
 @media screen and (max-width: 768px) {
-  .mainTitle {
-    font-size: 1.8rem;
-    margin: 60px auto;
-  }
+  
 
   .tabMenu {
     flex-direction: column;

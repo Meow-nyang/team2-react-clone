@@ -17,7 +17,7 @@ const SPCESGPage = () => {
             <img
               src={imageEsg_2}
               alt="SPC ESG 경영체계 도표"
-              style={{ maxWidth: '95%', maxHeight: '95%' }}
+              style={{ maxWidth: '75%', maxHeight: '77%' }}
               className={styles.hoverImage}
             />
             
