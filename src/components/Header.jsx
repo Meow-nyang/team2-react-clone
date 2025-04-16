@@ -62,9 +62,7 @@ const Header = () => {
           </ul>
         </nav>
         {isHoverMenu && (
-          <div className={styles.dropdown}>
-            <HeaderList onMouse={handleMouseOn} />
-          </div>
+          <HeaderList onMouse={handleMouseOn} visible={isHoverMenu} />
         )}
       </div>
     </header>

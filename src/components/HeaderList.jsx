@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/HeaderList.module.scss';
 import { Link } from 'react-router-dom';
 
@@ -51,19 +52,24 @@ const menuItems = [
 ];
 
 const HeaderList = ({ onMouse }) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 10);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div
-      className={styles.dropdown}
-      onMouseLeave={() => {
-        onMouse(false);
-      }}
+      className={`${styles.dropdown} ${isVisible ? styles.visible : ''}`}
+      onMouseLeave={() => onMouse(false)}
     >
       {menuItems.map((menu, index) => (
         <div key={index} className={styles.column}>
           <ul className={styles.items}>
             {menu.items.map((item, i) => (
               <li key={i} className={styles.item}>
-                <Link to={item.link}>{item.label}</Link>
+                <Link to={item.link || '#'}>{item.label}</Link>
               </li>
             ))}
           </ul>
