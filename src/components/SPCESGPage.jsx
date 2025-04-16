@@ -50,10 +50,6 @@ const SPCESGPage = () => {
 
         {/* HAPPY & HEALTHY COMPANY 섹션 (기존 유지) */}
         <section className={styles.happyHealthySection}>
-          <div className={styles.sectionTitle}></div>
-          <div className={styles.sectionContent}>
-            <div className={styles.imageContainer}></div>
-          </div>
           <StrategyTable />
         </section>
       </div>
