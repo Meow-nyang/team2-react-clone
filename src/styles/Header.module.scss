@@ -3,65 +3,108 @@
   top: 0;
   width: 100%;
   background-color: #ffffff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  padding: 1rem 0;
+  padding: 1rem 1.2rem;
+  z-index: 80;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 0 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #0078d7;
-  text-decoration: none;
+  margin-top: 5px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+  }
 }
 
 .nav {
   list-style: none;
   display: flex;
-  gap: 2rem;
-  width: 80%;
+  gap: 5rem;
+  width: 1800px;
+  position: relative;
 
-  justify-content: space-between;
+  justify-content: center;
 
   li a {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #000;
     text-decoration: none;
     color: #333;
-    font-weight: 500;
+    font-weight: 800;
+    font-size: 1.3rem;
     transition: color 0.2s ease-in-out;
-
-    &:hover {
-      color: #0078d7;
-    }
   }
 }
 
 .right {
   display: flex;
-  gap: 2rem;
+  gap: 4.4rem;
   list-style: none;
   justify-content: space-between;
+  transform: translateX(-80px);
+
+  @media (max-width: 1312px) and (min-width: 1200px) {
+    gap: 3rem;
+    li {
+      .lii {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  @media (max-width: 1200px) and (min-width: 1125px) {
+    gap: 2rem;
+    li {
+      .lii {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  @media (max-width: 1125px) {
+    gap: 1rem;
+    li {
+      .lii {
+        font-size: 1rem;
+      }
+    }
+  }
 }
 
 .left {
   list-style: none;
   display: flex;
   gap: 2rem;
+  position: absolute;
+  right: 4rem;
 }
 
 .career {
-  padding: 8px 16px;
-  border-radius: 35%;
+  padding: 4px 9px;
+  border-radius: 44px;
   border: none;
-  transition: color 0.2s ease-in-out;
+  font-size: 0.9rem;
+  font-weight: 700;
+  height: 28px;
   &:hover {
-    color: #0078d7;
+    transition:
+      background-color 0.5s ease-in-out,
+      color 0.5s ease-in-out;
+    background-color: #3cb4e5;
+    color: #ffffff;
   }
 }
