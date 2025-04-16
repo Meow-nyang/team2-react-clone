@@ -8,7 +8,7 @@ import building from '../assets/images/esg.webp';
 
 const SPCESGPage = () => {
   return (
-    <>
+    <div className={styles.whole}>
       <p className={styles.topTitle}>ESG 경영</p>
       <CategoryNav />
       <div className={styles.container}>
@@ -53,7 +53,7 @@ const SPCESGPage = () => {
           <StrategyTable />
         </section>
       </div>
-    </>
+    </div>
   );
 };
 
