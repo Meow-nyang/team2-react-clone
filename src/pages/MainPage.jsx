@@ -22,7 +22,7 @@ const MainPage = () => {
 
   const brands = [
     {
-      title: '헤리티지',
+      title: t('heritage'),
       image: parisBaguette,
     },
     {
