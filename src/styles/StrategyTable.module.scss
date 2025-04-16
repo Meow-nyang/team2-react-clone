@@ -1,9 +1,13 @@
 .outer {
+  width: 76%;
+  margin-left: 7.5rem;
+  border-radius: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
-  padding: 3rem 2rem;
+  padding: 0 1.4rem;
+  padding-top: 3rem;
   background-color: #f5f5f5;
   gap: 1.5rem;
   flex-wrap: wrap;
@@ -38,9 +42,11 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  margin-bottom: 1.4rem;
 
   &:last-child {
     margin-top: 6rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -72,35 +78,45 @@
   background-color: #f5f5f5;
 
   .one {
+    text-align: center;
     font-weight: 700;
     font-size: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     color: #333;
+    border-bottom: 1px solid #ccc;
   }
 
   .two {
-    font-size: 0.9rem;
+    text-align: center;
+    font-size: 1.2rem;
     font-weight: 500;
-    padding-bottom: 1rem;
-    color: #555;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    color: #000;
+
+    border-bottom: 1px solid #ccc;
   }
 
   .three {
     margin-top: 0.8rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #ccc;
   }
 }
 
 .list {
   list-style: disc;
   padding-left: 1.2rem;
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   line-height: 1.5;
-  color: #777;
+  color: #000;
 }
 
 .second {
+  margin-top: 2rem;
+  height: 65%;
   flex: 1 1 auto;
-  background: #f5f5f5;
+  background: #fff;
   border-radius: 10px;
   padding: 2rem;
   text-align: center;
@@ -114,6 +130,7 @@
 
 .midBlock {
   width: 100%;
+  background: #fff;
 
   h2 {
     font-size: 1.6rem;
@@ -142,9 +159,9 @@
 }
 
 .bottom {
-  margin-top: 1.5rem;
-  padding: 1.2rem;
-  background-color: #666666;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #c5c5c5;
   border-radius: 10px;
   text-align: center;
   font-weight: 700;

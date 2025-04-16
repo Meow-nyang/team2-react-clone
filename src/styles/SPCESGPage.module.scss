@@ -1,40 +1,20 @@
 @import url('https://cdn.jsdelivr.net/npm/pretendard@latest/dist/web/static/pretendard.css');
 
+.topTitle {
+  padding-top: 4rem;
+  margin-left: 45%;
+  padding-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
 /* 기본 컨테이너 */
 .container {
+  padding-top: 1.5rem;
   position: relative;
   background-color: #fff;
   //padding: 1.5rem 1rem 1rem 1rem;
 }
-
-/* 메인 타이틀 */
-
-// /* 탭 메뉴 (추후 사용 예정) */
-// .tabMenu {
-//   display: flex;
-//   justify-content: center;
-//   gap: 1.5rem;
-//   margin-top: 2rem;
-//   flex-wrap: wrap;
-// }
-
-// .tab {
-//   padding: 0.6rem 2rem;
-//   border-radius: 999px;
-//   background-color: #f8f8f8;
-//   color: #333;
-//   font-weight: 600;
-//   font-size: 1rem;
-//   border: 1px solid #ccc;
-//   text-decoration: none;
-//   transition: all 0.3s ease;
-//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-
-//   &:hover {
-//     background-color: #e0e0e0;
-//     color: #111;
-//   }
-// }
 
 .active {
   background-color: #000;
@@ -50,35 +30,41 @@
 }
 
 .sectionContentFull {
-  max-width: 1200px;
-  margin: 0 auto;
+  padding-top: 2rem;
+  max-width: 80%;
+  margin-left: 8rem;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   overflow: hidden;
-  //gap: 1rem;
   flex-direction: row; /* 이미지를 왼쪽에 텍스트를 오른쪽에 배치 */
+  gap: 2rem;
 }
 
 .imageContainerFull,
 .imageContainer {
-  //flex: 1;
+  flex: 2;
   text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
 
   img {
-    max-width: 100%; /* 이미지 최대 너비 50% */
-    height: auto; /* 이미지 비율 유지 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 20px;
     margin-bottom: 1rem;
   }
 }
 
 .textContainerFull {
-  flex: 1;
-  text-align: left; /* 텍스트를 왼쪽 정렬 */
+  width: 80%;
+  flex: 3;
+  text-align: left;
   background: #eaeaea;
-  padding: 20px; /* 텍스트 주변에 여백 추가 */
-  border-radius: 10px; /* 텍스트 컨테이너에 약간의 둥근 모서리 적용 */
+  padding: 3.5rem 2rem; /* 텍스트 주변에 여백 추가 */
+  border-radius: 20px; /* 텍스트 컨테이너에 약간의 둥근 모서리 적용 */
+  line-height: 0.7rem;
 }
 
 .sectionDescriptionFull,
@@ -87,6 +73,13 @@
   line-height: 1.8;
   color: #555;
   white-space: pre-line;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.imgBox {
+  overflow: hidden;
+  border-radius: 20px;
 }
 
 /* ESG 이미지 호버 효과 */
@@ -94,46 +87,64 @@
   transition: transform 0.3s ease-in-out;
 
   &:hover {
-    transform: scale(1.02);
+    transform: scale(1.2);
     cursor: pointer;
   }
 }
 
 /* 지속가능경영보고서 하단 */
 .sustainabilityReportBottom {
-  padding: 20px;
   background-color: #fff;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  margin-left: 1.5rem;
+
+  border-radius: 20px;
 }
 
 .background-wrap-bottom {
-  background: url('../assets/images/esg.webp') no-repeat center / cover;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   text-align: center;
   color: white;
-  border-radius: 20px;
-  margin: 60px auto 20px;
-  max-width: 1200px;
+  margin-left: 4.5rem;
+  max-width: 81.5%;
   display: flex; /* Flexbox 레이아웃 사용 */
+  flex-direction: column;
   justify-content: center; /* 가로 방향 가운데 정렬 */
-  align-items: center;
+  align-items: stretch;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
   /* 세로 방향 가운데 정렬 */
-  &:hover {
+  .building {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
     transition: transform 0.3s ease-in-out;
-    transform: scale(1.05); /* 약간 확대 */
-    opacity: 0.9; /* 약간 투명하게 */
-    cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+    position: relative;
+    z-index: 1;
+    &:hover {
+      transform: scale(1.1); /* 약간 확대 */
+    }
   }
 }
 
 .contentBottom {
+  position: absolute;
+  top: 35%;
+  left: 30%;
   font-size: 2.5rem;
   font-weight: 800;
   line-height: 1.4;
   padding: 1.5rem 2rem;
-  border-radius: 12px;
+  z-index: 2;
   color: #fff;
+  span {
+    position: absolute;
+    top: 50%;
+  }
 }
 
 /* HAPPY & HEALTHY COMPANY 섹션 기본 유지 */
