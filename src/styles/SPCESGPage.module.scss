@@ -4,44 +4,38 @@
 .container {
   position: relative;
   background-color: #fff;
-  padding: 2.5rem;
-
+  padding: 2.5rem 0rem 0rem 0rem;
 }
 
 /* 메인 타이틀 */
-.mainTitle {
-  text-align: center;
-  margin: 60px auto;
-  font-size: 2.5rem;
-  font-weight: 800;
-}
 
-/* 탭 메뉴 (추후 사용 예정) */
-.tabMenu {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-}
 
-.tab {
-  padding: 0.6rem 2rem;
-  border-radius: 999px;
-  background-color: #f8f8f8;
-  color: #333;
-  font-weight: 600;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+// /* 탭 메뉴 (추후 사용 예정) */
+// .tabMenu {
+//   display: flex;
+//   justify-content: center;
+//   gap: 1.5rem;
+//   margin-top: 2rem;
+//   flex-wrap: wrap;
+// }
 
-  &:hover {
-    background-color: #e0e0e0;
-    color: #111;
-  }
-}
+// .tab {
+//   padding: 0.6rem 2rem;
+//   border-radius: 999px;
+//   background-color: #f8f8f8;
+//   color: #333;
+//   font-weight: 600;
+//   font-size: 1rem;
+//   border: 1px solid #ccc;
+//   text-decoration: none;
+//   transition: all 0.3s ease;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+//   &:hover {
+//     background-color: #e0e0e0;
+//     color: #111;
+//   }
+// }
 
 .active {
   background-color: #000;
@@ -61,17 +55,19 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 2rem;
+ justify-content: center;
+  //gap: 1rem;
+  flex-direction: row; /* 이미지를 왼쪽에 텍스트를 오른쪽에 배치 */
 }
 
 .imageContainerFull,
 .imageContainer {
-  flex: 1;
+  //flex: 1;
   text-align: center;
 
   img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* 이미지 최대 너비 50% */
+    height: auto; /* 이미지 비율 유지 */
     border-radius: 20px;
     margin-bottom: 1rem;
   }
@@ -79,6 +75,10 @@
 
 .textContainerFull {
   flex: 1;
+  text-align: left; /* 텍스트를 왼쪽 정렬 */
+  background: #EAEAEA;
+  padding: 20px; /* 텍스트 주변에 여백 추가 */
+  border-radius: 10px; /* 텍스트 컨테이너에 약간의 둥근 모서리 적용 */
 }
 
 .sectionDescriptionFull,
@@ -86,9 +86,7 @@
   font-size: 1.2rem;
   line-height: 1.8;
   color: #555;
-  text-align: left;
   white-space: pre-line;
-  padding-top: 1rem;
 }
 
 /* ESG 이미지 호버 효과 */
@@ -117,14 +115,15 @@
   border-radius: 20px;
   margin: 60px auto 20px;
   max-width: 1200px;
-  display: flex;
-  justify-content: center;
+  display: flex; /* Flexbox 레이아웃 사용 */
+  justify-content: center; /* 가로 방향 가운데 정렬 */
   align-items: center;
-
-  &:hover {
-    transform: scale(1.04);
-    opacity: 0.9;
-    cursor: pointer;
+   /* 세로 방향 가운데 정렬 */
+   &:hover {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.05); /* 약간 확대 */
+    opacity: 0.9; /* 약간 투명하게 */
+    cursor: pointer; /* 마우스 커서를 포인터로 변경 */
   }
 }
 
@@ -132,7 +131,6 @@
   font-size: 2.5rem;
   font-weight: 800;
   line-height: 1.4;
-  
   padding: 1.5rem 2rem;
   border-radius: 12px;
   color: #fff;
