@@ -1,0 +1,20 @@
+.gnbMobile {
+  display: block !important;
+  //   display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  color: #000;
+  z-index: 9999;
+}
+
+.gnbMobile:hover {
+  color: #ed0909;
+}
+
+@media (max-width: 768px) {
+  .gnbMobile {
+    display: block;
+    font-size: 40px;
+  }
+}
