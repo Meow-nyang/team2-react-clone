@@ -22,6 +22,8 @@
 
 - 원본 사이트 주소 https://www.spc.co.kr/
 
+  <img src="images/spc_site.png" alt="사이트 이미지" width=450 />
+
 - 클론한 페이지 : Main Page, ABOUT SPC, ESG, SUPPORT
 
 - 프로젝트 목표는 React 기반 웹 개발 실력 향상, 실제 서비스 구조를 분석하고 구현함으로써 컴포넌트 설계, 상태 관리, 라우팅 등
@@ -38,6 +40,8 @@
 - github에 업로드 완료.
 
 ## 테스트 케이스
+
+  <img src="images/spc_anim.gif" alt="사이트 이미지" width=450 />
 
 - https://docs.google.com/spreadsheets/d/1Y5DfRmOucKZX6KkjrseeLGoPP62f8Gc8lFkO_vhCRlU/edit?gid=0#gid=0
 
