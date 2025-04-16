@@ -111,3 +111,12 @@
 .right {
   margin-left: 10rem;
 }
+
+@media (max-width: 1024px) {
+  .right {
+    display: none;
+  }
+  .left {
+    width: 60%;
+  }
+}
