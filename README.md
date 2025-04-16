@@ -37,6 +37,18 @@
 
 - github에 업로드 완료.
 
+## 테스트 케이스
+
+- https://docs.google.com/spreadsheets/d/1Y5DfRmOucKZX6KkjrseeLGoPP62f8Gc8lFkO_vhCRlU/edit?gid=0#gid=0
+
+## 한계점
+
+- 시간이 부족해서 디테일한 부분 완성도가 아쉬움.
+
+- 메인 화면 전체를 구현하지 못함.
+
+- 번역 기능을 전부 넣지 못함.
+
 ## 회고
 
 - React와 SCSS에 대한 이해 부족으로 어려움을 느꼈고, 프론트엔드 개발 역량을 더 키워야겠다고 느꼈음. React는 처음 다뤄보는 만큼, 기초부터 차근히 학습할 필요성을 느꼈음.
